@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<!-- saved from url=(0112)https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Pokemon ML</title>
+
 <style type="text/css">
 
 html {
@@ -9,7 +11,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 body {
   margin: 0;
 }
@@ -13195,10 +13196,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Predicting-Pokemon-Battles"><center>Predicting Pokemon Battles</center><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Predicting-Pokemon-Battles">¶</a></h1><h3 id="Matt-Falzon,-Robert-Calkins,-Michael-Bailey"><center>Matt Falzon, Robert Calkins, Michael Bailey</center><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Matt-Falzon,-Robert-Calkins,-Michael-Bailey">¶</a></h3><p></p><p align="center">
+<h1 id="Predicting-Pokemon-Battles"><center>Predicting Pokemon Battles</center><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Predicting-Pokemon-Battles">¶</a></h1><center>Matt Falzon, Robert Calkins, Michael Bailey</center><p align="center">
     <img src="./index_files/all_pokemons.png" width="500" height="300">
-&lt;/P&gt;</p>
-
+</p>
 </div>
 </div>
 </div>
@@ -13210,9 +13210,9 @@ div#notebook {
 Pokémon is a video game franchise centered around fictional creatures called 'pokémon' which humans catch, train, and battle for sport. In the game, the player is tasked with building a team of strong pokémon which they will use to challenge other 'pokemon trainers'.
 </p><p>
 Each pokémon has a unique look, typing and a set of base stats. Each pokémon can be identified by their unique pokédex number. The typing follows a rock-paper-scissors like mechanic where, for example, a pokémon of type water has an advantage over a pokémon of type fire. The stats determine how much health, strength and speed a pokémon might have. Since each pokémon is different it can be hard to tell without experience which would have an edge over another in a battle.
-</p><h3 id="Project-Goals"><b>Project Goals</b><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Project-Goals">¶</a></h3><p>
+</p><h3 id="Project-Goals"><b>Project Goals</b><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Project-Goals">¶</a></h3><p>
 This tutorial seeks to explore the relationship between a pokémon's characteristics and win percentage in around 100 simulated battles. In order to preform our analysis we'll be looking at 3 characterstics, a pokémon's type, their base stats, and finally their legendary status. We want to know if we can use these characterstics in order to predict the outcome of future battles. The Kaggle dataset 'Pokemon-Weedle's Cave' by user <a href="https://www.kaggle.com/terminus7">terminus7</a> contains two files which will be used to preform our analysis. The first file contains the pokémon charactersitics and the second one contains information about previous battles.
-</p><h3 id="Technology"><b>Technology</b><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Technology">¶</a></h3><p>In this tutorial we'll be using the following python libraries. Feel free to follow these links to learn more!</p>
+</p><h3 id="Technology"><b>Technology</b><a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Technology">¶</a></h3><p>In this tutorial we'll be using the following python libraries. Feel free to follow these links to learn more!</p>
 <ul>
 <li><a href="https://requests.readthedocs.io/en/master/">requests</a></li>
 <li><a href="https://docs.python.org/3/library/json.html">json</a></li>
@@ -13247,9 +13247,9 @@ This tutorial seeks to explore the relationship between a pokémon's characteris
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Data-Collection">¶</a></h2><p>We are using a dataset found on kaggle. You can find and download the CSV here:</p>
+<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Data-Collection">¶</a></h2><p>We are using a dataset found on kaggle. You can find and download the CSV here:</p>
 <p><a href="https://www.kaggle.com/terminus7/pok%C3%A9mon-challenge">Pokémon Weedle's Cave</a></p>
-<h4 id="Data-Size-and-Content">Data Size and Content<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Data-Size-and-Content">¶</a></h4><p>
+<h4 id="Data-Size-and-Content">Data Size and Content<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Data-Size-and-Content">¶</a></h4><p>
 This dataset contains two csv files. One contains entries for all 800 pokémon listed in the generation 6 Pokédex(a digital encyclopedia of information about pokémon). Each pokémon has 6 base stats and 1 or 2 types. The table also records each pokémon's generation(which set of games a pokémon first appeared in) and their legendary status. 
 
 The other dataset contains 50,000 simulated battles. The first two columns contain the ids of the combatants and the third one column contains the id of the winner. The pokémon in the first column attacked first.
@@ -13505,7 +13505,7 @@ The other dataset contains 50,000 simulated battles. The first two columns conta
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Processing">Data Processing<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Data-Processing">¶</a></h2><h3 id="Tidy-up-Pokémon">Tidy up Pokémon<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Tidy-up-Pok%C3%A9mon">¶</a></h3><p>
+<h2 id="Data-Processing">Data Processing<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Data-Processing">¶</a></h2><h3 id="Tidy-up-Pokémon">Tidy up Pokémon<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Tidy-up-Pok%C3%A9mon">¶</a></h3><p>
 Now that we know what our data represents, let's take a closer look at the pokémon table ensure that none of the data is missing.
 </p>
 </div>
@@ -14175,7 +14175,7 @@ In order to identify our missing pokemon, let's make use of the <a href="https:/
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Continuity-between-Combats-and-Pokémon">Continuity between Combats and Pokémon<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Continuity-between-Combats-and-Pok%C3%A9mon">¶</a></h3><p>
+<h3 id="Continuity-between-Combats-and-Pokémon">Continuity between Combats and Pokémon<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Continuity-between-Combats-and-Pok%C3%A9mon">¶</a></h3><p>
 Our next step is to ensure that no data is missing from the combats dataset. We also need to make sure every pokémon in our pokémon table is represented in the combats table. We can check this by comparing the number of unique pokémon with the number of unique winners and losers.
 </p>
 </div>
@@ -14266,7 +14266,7 @@ Unqiue Losers: 784
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="A-disconnect">A disconnect<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#A-disconnect">¶</a></h4><p>
+<h4 id="A-disconnect">A disconnect<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#A-disconnect">¶</a></h4><p>
 There's 17 pokemon missing from our winners column and 16 pokemon missing from our loser column. It's possible that certain pokemon have no wins while others have no losses, so let's see if any of these pokemon don't appear as either winners or losers. If they do not, we will drop them from the table as they won't provide any insight for our analysis.
 </p>
 </div>
@@ -14579,7 +14579,7 @@ Unqiue Losers: 784
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Data-Exploration">¶</a></h2><p>We know there are 784 competitors with one Pokemon who had 0 wins (sucks to be a Shuckle). We will now explore the complete datasets. 
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Data-Exploration">¶</a></h2><p>We know there are 784 competitors with one Pokemon who had 0 wins (sucks to be a Shuckle). We will now explore the complete datasets. 
 
 Let's start by generating the win percentage for each Pokemon.
 </p>
@@ -15159,7 +15159,7 @@ Let's start by generating the win percentage for each Pokemon.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Whats-going-on-here?">Whats going on here?<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Whats-going-on-here?">¶</a></h3><p>
+<h3 id="Whats-going-on-here?">Whats going on here?<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Whats-going-on-here?">¶</a></h3><p>
 We just generated a lot of tables. Lets break it down. We first figured out each Pokemons win rate. Turns out Mega Aerodactyle has the highest win rate at 98%. 
 
 We now want to see if any of the top 50 or bottom 50 have any typings in common. The first table uses the dataset as a whole for the control, the most common type seems to be Normal with 59 Pokemon; followed by water. 
@@ -15174,7 +15174,7 @@ Next we will visualize the data to see how the Pokemon stats relate to each othe
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Visualization">Data Visualization<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Data-Visualization">¶</a></h2><p>
+<h2 id="Data-Visualization">Data Visualization<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Data-Visualization">¶</a></h2><p>
 We saw there was a slight difference in the types of Pokemon within the top 50 and bottom 50 Pokemon. Now we are going to explore the relationships between the stats of Pokemon and their win rate. Below we will graph each Pokemons 6 stats against its win percentage. Yellow dots indicate if a Pokemon is Legendary.
 </p>
 </div>
@@ -15442,7 +15442,7 @@ We saw there was a slight difference in the types of Pokemon within the top 50 a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Machine-Learning">Machine Learning<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Machine-Learning">¶</a></h2><p>
+<h2 id="Machine-Learning">Machine Learning<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Machine-Learning">¶</a></h2><p>
 While we have tidied up our data in previous sections. It's not quite ready for a machine learning model just yet.
 
 We want to create a feature set containing two pokémon's characteristics for each battle. This will allow us to train different regression models where the output is either a 0 or 1. 0 will mean the first Pokemon won, and a 1 will mean the second Pokemon won. 
@@ -15594,7 +15594,7 @@ First we will finalize our feature set, which will be denoted "pokemon_ml," and 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-the-Feature-Set">Creating the Feature Set<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Creating-the-Feature-Set">¶</a></h3><p>This is a great start to our ML dataset. We have isolated the features we want to train our model on. Our next step is to encode the types and legendary status.</p>
+<h3 id="Creating-the-Feature-Set">Creating the Feature Set<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Creating-the-Feature-Set">¶</a></h3><p>This is a great start to our ML dataset. We have isolated the features we want to train our model on. Our next step is to encode the types and legendary status.</p>
 <p>ML models would not understand the word "grass" so we are going to use an Ordinal Encoder to convert the types into a range from 0 to 17. Sklearn has a package that does just that.</p>
 
 </div>
@@ -16080,7 +16080,7 @@ Name: Winner, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Training-Models">Training Models<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Training-Models">¶</a></h3><p>Our dataset is ready to go. We'll use the dataset to pass 20 or so features into the model which will ouput either a 0 or a 1 signifying the winner. In this tutorial we'll be using sklearns train_test_split method to create our training and testing data.</p>
+<h3 id="Training-Models">Training Models<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Training-Models">¶</a></h3><p>Our dataset is ready to go. We'll use the dataset to pass 20 or so features into the model which will ouput either a 0 or a 1 signifying the winner. In this tutorial we'll be using sklearns train_test_split method to create our training and testing data.</p>
 <p>We will train a variety of models in order to determine which one produces the most accurate results for our dataset. To start, linear regression will be used as a base line. Since our data is meant for logistic regression, this should produce poor results. Following linear regression we'll try logistic regression, KNN, then finally a decision tree regressor.</p>
 
 </div>
@@ -16347,7 +16347,7 @@ KNN with k= 9 Accuracy:  0.8773
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Conclusion">Conclusion<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608753643209#Conclusion">¶</a></h3><p>
+<h3 id="Conclusion">Conclusion<a class="anchor-link" href="https://htmtopdf.herokuapp.com/ipynbviewer/temp/1f703c4efa47161a1177a58be1d35a41/Pokemon_ml.html?t=1608754494035#Conclusion">¶</a></h3><p>
 With the above models we managed to predict pokémon battles up to 89% accuracy. Logistic Regression and K Nearest Neighbors preformed the best. Based on the model accuracy, there is a relationship between a pokémon's characteristics and their win percentage.
 
 Thank you for following along with our data science tutorial!
